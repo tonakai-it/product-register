@@ -10,10 +10,12 @@ script:
   - docker-compose exec --env 'RAILS_ENV=test' web rails db:migrate
   - docker-compose exec --env 'RAILS_ENV=test' web rails test
 
+
+
 language: ruby
 cache: bundler
 
-gemfile:
-  - gemfiles/Gemfile.travis
-rvm:
-  - 2.5.9
+# gemfile:
+#   - gemfiles/Gemfile.travis
+rvm: 2.5.9
+install: skip
