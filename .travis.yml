@@ -17,5 +17,5 @@ cache: bundler
 
 # gemfile:
 #   - gemfiles/Gemfile.travis
-rvm: 2.5.9
+rbenv: 2.5.9
 install: skip
