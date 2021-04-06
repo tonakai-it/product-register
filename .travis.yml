@@ -9,3 +9,14 @@ script:
   - docker-compose exec --env 'RAILS_ENV=test' web rails db:create
   - docker-compose exec --env 'RAILS_ENV=test' web rails db:migrate
   - docker-compose exec --env 'RAILS_ENV=test' web rails test
+
+language: ruby
+cache: bundler
+
+gemfile:
+  - gemfiles/Gemfile.travis
+rvm:
+  - 2.0.0
+  - 1.9.3
+  - jruby-19mode
+  - rbx-2
